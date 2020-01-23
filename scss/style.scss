@@ -3,6 +3,7 @@
 $primary-color: #428bca;
 $secondary-color: lighten($primary-color, 30%);
 $light-color: #9e9e9e;
+$progress-heigth: 1rem;
 
 * {
     margin: 0;
@@ -125,4 +126,12 @@ h1.logo {
     border-bottom: 0.3rem solid $primary-color;
     width: 0;
     transition: width 600ms ease-in-out;
+}
+
+#progress-bar {
+    position: absolute;
+    background: $secondary-color;
+    height: $progress-heigth;
+    width: 0;
+    transition: width 500ms ease-in-out;
 }
