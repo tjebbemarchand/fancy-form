@@ -136,3 +136,10 @@ document.addEventListener("DOMContentLoaded", getQuestion);
 
 // Next button click.
 nextBtn.addEventListener("click", validate);
+
+// Enter event.
+inputField.addEventListener("keyup", e => {
+    if (e.keyCode === 13) {
+        validate();
+    }
+});
