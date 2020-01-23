@@ -154,6 +154,12 @@ document.addEventListener("DOMContentLoaded", getQuestion);
 // Next button click.
 nextBtn.addEventListener("click", validate);
 
+// Go to previous question.
+prevBtn.addEventListener("click", () => {
+    position -= position;
+    getQuestion();
+});
+
 // Enter event.
 inputField.addEventListener("keyup", e => {
     if (e.keyCode === 13) {
