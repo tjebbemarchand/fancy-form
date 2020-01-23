@@ -3,6 +3,7 @@
 $primary-color: #428bca;
 $secondary-color: lighten($primary-color, 30%);
 $light-color: #9e9e9e;
+$error-color: #ff2d26;
 $progress-heigth: 1rem;
 
 * {
@@ -134,4 +135,20 @@ h1.logo {
     height: $progress-heigth;
     width: 0;
     transition: width 500ms ease-in-out;
+}
+
+.error {
+    #input-progress {
+        border-color: $error-color;
+    }
+
+    #next-btn {
+        color: $error-color;
+    }
+}
+
+@media (max-width: 600px) {
+    #form-box {
+        width: 80%;
+    }
 }
