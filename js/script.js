@@ -101,8 +101,33 @@ function inputFail() {
     }
 }
 
-// Passed input
-function inputPass() {}
+// Passed input.
+function inputPass() {
+    formBox.className = "";
+    setTimeout(transform, shakeTime * 0, 0, 10);
+    setTimeout(transform, shakeTime * 1, 0, 0);
+
+    // Increment position.
+    position++;
+
+    // If new question, hide current and get next question.
+    if (questions[position]) {
+        hideQuestion();
+        getQuestion();
+    } else {
+        // Remove if there are no more questions.
+        hideQuestion();
+
+        // Close formbox.
+        formBox.className = "close";
+
+        // Set progress bar to 100%.
+        progressBar.style.width = "100%";
+
+        // Form complete.
+        formComplete();
+    }
+}
 
 // EVENTS.
 // Get question on DOM load.
