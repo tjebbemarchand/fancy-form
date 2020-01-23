@@ -39,7 +39,7 @@ function getQuestion() {
     inputLabel.innerHTML = questions[position].question;
 
     // Get current type.
-    inputField.type = questions[position].type || "text";
+    inputField.type = questions[position].field || "text";
 
     // Get current answer.
     inputField.value = questions[position].answer || "";
