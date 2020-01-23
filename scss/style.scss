@@ -30,3 +30,15 @@ h1.logo {
     justify-content: top;
     align-items: center;
 }
+
+#form-box {
+    font-size: 1.6rem;
+    background-color: #fff;
+    position: relative;
+    width: 60rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1), 0 6px 10px 5px rgba(0, 0, 0, 0.1),
+        0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    transition: transfrom 100ms ease-in-out;
+}
