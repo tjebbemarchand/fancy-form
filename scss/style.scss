@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto");
 
 $primary-color: #428bca;
+$secondary-color: lighten($primary-color, 30%);
+$light-color: #9e9e9e;
 
 * {
     margin: 0;
@@ -49,4 +51,34 @@ h1.logo {
     overflow: hidden;
     transition: 800ms ease-in-out;
     box-shadow: none;
+}
+
+#next-btn {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    font-size: 4rem;
+    color: $primary-color;
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+#prev-btn {
+    position: absolute;
+    font-size: 1.8rem;
+    left: 3rem;
+    top: 1.2rem;
+    z-index: 2;
+    color: $light-color;
+    float: right;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary-color;
+    }
 }
