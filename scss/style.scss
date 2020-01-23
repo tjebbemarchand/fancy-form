@@ -82,3 +82,47 @@ h1.logo {
         color: $primary-color;
     }
 }
+
+#input-group {
+    position: relative;
+    padding: 3rem 2rem 2rem 2rem;
+    margin: 1rem 6rem 1rem 1rem;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+
+    input {
+        position: relative;
+        width: 100%;
+        border: none;
+        font-size: 2rem;
+        font-weight: bold;
+        outline: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    #input-label {
+        position: absolute;
+        pointer-events: none;
+        top: 3.2rem;
+        left: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        transition: 200ms ease-in-out;
+    }
+
+    input:valid + #input-label {
+        top: 0.6rem;
+        left: 42rem;
+        margin-left: 0 !important;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: $light-color;
+    }
+}
+
+#input-progress {
+    border-bottom: 0.3rem solid $primary-color;
+    width: 0;
+    transition: width 600ms ease-in-out;
+}
