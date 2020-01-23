@@ -42,3 +42,11 @@ h1.logo {
         0 8px 10px -5px rgba(0, 0, 0, 0.2);
     transition: transfrom 100ms ease-in-out;
 }
+
+#form-box.close {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 800ms ease-in-out;
+    box-shadow: none;
+}
