@@ -7,7 +7,8 @@ const questions = [
     },
     {
         question: "Enter your email",
-        pattern: /\S+@\S+\.\S+/
+        pattern: /\S+@\S+\.\S+/,
+        field: "email"
     },
     {
         question: "Create a password",
