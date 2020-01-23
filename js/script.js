@@ -108,6 +108,9 @@ function inputPass() {
     setTimeout(transform, shakeTime * 0, 0, 10);
     setTimeout(transform, shakeTime * 1, 0, 0);
 
+    // Store answer in array.
+    questions[position].answer = inputField.value;
+
     // Increment position.
     position++;
 
@@ -128,6 +131,21 @@ function inputPass() {
         // Form complete.
         formComplete();
     }
+}
+
+// All fields complete - Show h1.
+function formComplete() {
+    const h1 = document.createElement("h1");
+    h1.classList.add("end");
+    h1.appendChild(
+        document.createTextNode(
+            `Thanks ${questions[0].answer}. You are registered and will get an email shortly`
+        )
+    );
+    setTimeout(() => {
+        formBox.parentElement.appendChild(h1);
+        setTimeout(() => (h1.style.opacity = 1), 50);
+    }, 1000);
 }
 
 // EVENTS.
