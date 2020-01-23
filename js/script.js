@@ -63,5 +63,14 @@ function showQuestion() {
     inputProgress.style.width = "100%";
 }
 
+// Hide question to user.
+function hideQuestion() {
+    inputGroup.style.opacity = 0;
+    inputLabel.style.marginLeft = 0;
+    inputProgress.style.width = 0;
+    inputProgress.style.transition = "none";
+    inputGroup.style.border = null;
+}
+
 // EVENTS.
 document.addEventListener("DOMContentLoaded", getQuestion);
