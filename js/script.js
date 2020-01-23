@@ -53,6 +53,7 @@ function getQuestion() {
     // Add user icon or back arrow depending on question.
     prevBtn.className = position ? "fas fa-arrow-left" : "fas fa-user";
 
+    // Show question in UI.
     showQuestion();
 }
 
@@ -72,5 +73,40 @@ function hideQuestion() {
     inputGroup.style.border = null;
 }
 
+// Transform to create shake motion.
+function transform(x, y) {
+    formBox.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+// Validate field.
+function validate() {
+    // Check if pattern matches.
+    if (!inputField.value.match(questions[position].pattern || /.+/)) {
+        inputFail();
+    } else {
+        inputPass();
+    }
+}
+
+// Fail input.
+function inputFail() {
+    // Add error class.
+    formBox.className = "error";
+
+    // Repeat shake motion - set i to number of shakes.
+    for (let i = 0; i < 6; i++) {
+        setTimeout(transform, shakeTime * i, ((i % 2) * 2 - 1) * 20, 0);
+        setTimeout(transform, shakeTime * 6, 0, 0);
+        inputField.focus();
+    }
+}
+
+// Passed input
+function inputPass() {}
+
 // EVENTS.
+// Get question on DOM load.
 document.addEventListener("DOMContentLoaded", getQuestion);
+
+// Next button click.
+nextBtn.addEventListener("click", validate);
